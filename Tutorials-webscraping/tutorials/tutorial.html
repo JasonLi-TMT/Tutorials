@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- Bootstrap CSS -->
+        <!-- <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
+    
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
+        <title>Tutorial</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    </head>
+
+<main role="main" class="container-fuild no-gutters">
+    <br>
+    <br>
+<<<<<<< HEAD
+        <div id="testTag"> </div>
+=======
+    
+>>>>>>> f9524a0a552a8bb4f67f22394dba79c504d62323
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                </tr>
+                <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                </tr>
+                <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                </tr>
+            </tbody>
+<<<<<<< HEAD
+        </table>
+=======
+            </table>
+
+
+    <div>
+        <h1>Introduction</h1>
+        <p>Astro anomaly detection system is designed for <strong>high dimension, realtime, metrics based</strong> anomaly detection. It is designed by woc machine learning operation team, it is powered by deep learning, big data & other techniques. If you are interested in learning more about the model or app, plz contact woc for more details.</p>
+        <strong><a href="https://dev-nocmlops.service.bo1.csnzoo.com/jobs/">link to the app.</a></strong><br>
+        <strong><a href="https://dev-nocmlops.service.bo1.csnzoo.com/tutorial/">link to image tutorial.</a></strong><br>
+        <strong><a href="https://git.csnzoo.com/zili/WOC_ML">Link to gitlab.</a></strong><br>
+        <strong><a href="https://kb.wayfair.com/kbnode/realtime-anomaly-detection-system">Link to KB.</a></strong>
+
+        <br>
+        <h1>Beginner guide</h1>
+            <ul>
+                <li><h2>Step1: Create Analysis Job </h2> </li>
+                    <ul>
+                        <li><h4>Click Start Analysis button on the top Nav Bar</h4></li>
+                        <li><h4>Config your Analysis Job</h4></li>
+                        <ul>
+                            <li>
+                                <h5>1: Choose Kibana Cluster: </h5> 
+                                <p>Switch Kibana cluster & index patterns on the top of left panel, if you <strong>didn't find your target cluster</strong>, plz contact woc machine learning operation team to add the cluster</p>
+                            </li>
+                            <li>
+                                <h5>2: Config analysis job:</h5>
+                                    <ul>
+                                        <li> 
+                                            <h6>Basic settings</h6> </li>
+                                            <ul>
+                                                <li>Job Name: it is your job name,<strong>must be unique, </strong> default is current time, you will need this to indentify your job </li>
+                                                <li>Interval: how frequent you would like to run the job, eg: 5 means detect anomaly every 5 minutes</li>
+                                                <strong>Select at least one rules from lucene Expression & Fields as filter data rules</strong>
+
+                                                <li>lucene expression: it is the same <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.4/query-dsl-query-string-query.html#query-string-syntax">lucene expression</a>  you see in kiabana, you could define the rules to extract events from kibana, eg: (datacenter:bo1) will only extract events which is saved in bo1.</li>
+                                                <li>Fields: fields you select will generate combinations, notice! you could only select at most 4 fields, more fields you select will more likely to generate sparse metrics, for eg: if you select "datacenter" and "deviceType" you will generate  12 metrics, [bo1,se1,ie2, stbo1] * [Desktop,Phone,Tablet]. </li>
+                                            </ul>
+                                        <li> 
+                                            <h6>Advanced settings</h6></li>
+                                            <ul>
+                                                <li>Look back time: when you want to start train your model, default is 6 weeks ago, then the model will extract data from look back time till now and train the model based on the extracted data.<strong>Look Back time should not be too far from now, it will consume huge computational power.</strong></li>
+                                                <li>Epochs: default is 6000, it defines how many times you want to loop over the training data and train the model, is the combination contains many metrics, could increase the epochs to 10000, but <strong>max 12000</strong> </li>
+                                                <li>Anomaly likelihood: it is the threshold that helps you filter anomaly, normaly default is 50, and you could adjust the likelihood later in Alert panel</li>
+                                                <li>Deviations: It is also a threshold that helps you filter anomaly, for eg: 20 means only abs(True-Pred)/Pred > 0.2 are considered as anomaly</li>
+                                                <li>Direct: determine anomaly that are higher or lower than predicted value, eg: 'up' means keep anomaly when trueVal > predVal</li>
+                                            </ul>
+                                        <li> 
+                                            <h6>Panel functions</h6></li>
+                                            <ul>
+                                                <li>Function of <strong>Left Panel</strong> : This panel is the place to config & create your analysis job. </li>
+                                                <li>Function of <strong>right panel</strong> : This panel is the kibana interaction panel, it is designed to let you try your lucene query to have a basic check of the data, if needs more detail data from kibana, plz click "to kibana" button to check for details.</li>
+                                            </ul>
+                                    </ul>
+                                    <ul>
+                                        <li>Combination table: this table shows all combinations, you could <strong>click on the row to switch</strong> time series graph, also could click "<strong>Customized alert button</strong>" to jump to alert create page.</li>
+                                    </ul>
+                            </li>
+                            <li><h5>3: Click Start Analysis Button & wait for around 2 minutes</h5><small>In production version, we will use gpu which will reduce the time greatly</small></li>
+                            <li><h5>4: To Create Alert Page:</h5></li>
+                                <ul>
+                                    <li>Switch metric: simply click the target row of the combination table, it will switch the graph.</li>  
+                                    <li><strong>Create Alert for Single Metric:</strong> Click "Create Alert" button on the right column of each row, it will lead you to the corresponding metic page.</li>
+                                </ul>
+                        </ul>
+                    </ul>               
+                <li> <h2>Step2: Create Alert </h2>
+                <ul>
+                    <li> <h4>Config Alert</h4> 
+                        <ul>
+                            <li>
+                                <h6>Basic Conf</h6>
+                                <ul>
+                                    <li>Alert id: Alert id is similar to job id, <strong>must be unique</strong>, and it is used to identify your alert</li>
+                                    <li>Look back time: when you want to start train your model, default is 6 weeks ago, then the model will extract data from look back time till now and train the model based on the extracted data.                                            
+                                            <strong>Look Back time should not be too far from now, it will consume huge computational power.</strong></li>
+                                    <li>Model Update Freq: it defines how often you want to update your model, default it will extract last week's data and retrain the model for 500 epochs. <strong>Format: "day hour:minute:second" or "hour:minute:second" </strong>for eg: 12:00:00 means your model will be updated every 12 hours, "7 12:00:00 means every 7 days and 12 hours, model will be updated".</li>
+                                    <li>Emails: Alert will be send to these emails, need to be sperated by comma</li>
+                                    <li>Slacks: Alert will be send to slack including users and channels, <strong> format: @someone, channel eg: @jason,wocmlops</strong>   will send alert to user zili and channel wocmlops</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Alert Level</h6>
+                                <ul>
+                                    <li>Direct: determine anomaly that are higher or lower than predicted value, eg: 'up' means keep anomaly when trueVal > predVal</li>
+                                    <li>Anomaly likelihood: it is the threshold that helps you filter anomaly, normaly default is 50, and you could adjust the likelihood later in Alert panel</li>
+                                    <li>Deviations: It is also a threshold that helps you filter anomaly, for eg: 20 means only abs(True-Pred)/Pred > 0.2 are considered as anomaly</li>
+                                    <li>Frequency: number of continuous anomaly detected before sending alert, eg: freq=2, means if two continous anomaly are detected, alert could be send </li>
+                                    <li>Sensitivity: Sensitivity defines how sensitive is your model, high sensitivity means narrow confidence interval, while low sensitivity means wide confidence interval</li>
+                                </ul>
+                                <strong>Update Graph Button:</strong> It will update graph based on your Alert settings, only Alerts that fit your customized need will be show on the graph, for eg: your likelihood is 50, deviation is 20, freq is 2, means only two continous Anomaly points(likelihood> 50, dev> 20) apears, anomaly will be sended
+                            </li>
+                        </ul>
+                    </li>
+                    <li><h4>Click Create New Alert Button</h4></li>
+                </ul>
+
+
+                </li>            
+
+                <li><h2>Step3: Update Alert Conf</h2></li>
+                    <ul>
+                        <li>
+                            <h6>Alert Level</h6>
+                                <ul>
+                                    <li>Likelihood, Deviation,Frequency are the same as mentioned above</li>
+                                </ul>
+                        </li>
+                        <li>
+                            <h6>Notification</h6>
+                                <ul>
+                                    <li>Emails, Slacks: are the same as mentioend above</li>
+                                </ul>
+                        </li>
+                        <li>
+                            <h4>Important: Model update</h4>
+                            <ul>
+                                <li>
+                                    <strong>Update Model Now Button</strong>: if you are not satisfy your model performance, you could define the config below and update the model.
+                                        <ul>
+                                            <li>1.training data period, eg: <small>2018 11:20:00 2018 01:01:00 </small> </li>
+                                            <li>2.number of epochs to train the model.  eg: <small>1000 epochs</small> </li>
+                                            <li>3.<strong>Overwrite</strong> the defined training peroid data with new prediction from new model </li>
+                                        </ul>
+                    
+                                </li>
+                            </ul>
+                        </li>
+                </ul>
+            </ul>
+        <h1>Common Problems</h1>
+            <ul>
+                <li>
+                    <h4>Bad Model performance</h4>
+                        <ul>
+                            <li><h6>Solutions</h6>
+                                <ul>
+                                    <li><strong>Train more epochs:</strong> Go to alert detail page, select Update Model panel, select training data period, select epochs, click update model button.</li>
+                                    <li><strong>Create Mew Job or Alert</strong>: Follow the create guidence and train a new model.</li>
+                                    <li><strong>Change model update conf</strong>: select a small number of interval, for eg: 1:00:00, your model will be updated every 1 hour which will generate a better prediction.</li>
+                                </ul>
+                            </li>
+                            <li><h6>Reasons</h6>
+                                <ul>
+                                    <li><strong>Model not well trained</strong>:Model is backed by Machine Learning: number of  training Epochs will affect the result.</li>
+                                    <li><strong>Model stuck in local minimum</strong>: Machine Learning Model is easy to stuck in Local minimum, create a new model is the best solution.</li>
+                                    <li><strong>Data Patterns not stable</strong>:ML model will learn patterns behind data, so if your data contains different patterns, the model will perform bad.</li>
+                                </ul>
+                            </li>
+                        </ul>    
+                </li>
+                <li>
+                    <h4>How to choose config parameters</h4>
+                        <ul>
+                            <li><strong>Look back time</strong>: normaly 8 weeks will be enough, at most 6 months, since model will be updated very often, no need to train on too many historical data.</li>
+                            <li><strong>Deviation&Likelihood</strong>: it depends on your model performance, but generally, deviation is not useful, so 20 is fine, likelihood will be different based on the model, but 50 is a good start point.</li>
+                            <li><strong>Interval(only support minute unit)</strong>: normaly 5 minutes is good, mimimal is 1 minutes but it will be too costly to run & train the model. if you are using hourly interval, plz use hour*60.</li>
+                            <li><strong>Fields & Lucene expression</strong>: fields are used for combination, lucene is setted based on your target, if you are not familiar with this, plz <strong>Ask #elastic channel for help</strong>.</li>
+                            <li><strong>Epochs</strong>:Normally 6000 epochs will have a good performance for alert, if you are not satisfy with the default number, you could train it manualy later in alert detail page under the update model panel.</li>
+                        </ul>
+                </li>
+                <li>
+                    <h4>Alert Messages not received</h4>
+                        <ul>
+                            <li><strong>Email not received</strong>: check your email format, shoud be comma seperated, do not use "", plain text is fine</li>
+                            <li><Strong>Slack not received</Strong>: check your format, comma seperated, for user add "@" before user, for channel, don't need to add "#" before channel, eg: @Jason, wochelp will send to Jason and wochelp channel</li>
+                        </ul>
+                </li>
+                <li>
+                    <h2>Contact for help</h2>
+                        Contact woc machine learning operation team for help, slack channel: #wocmlops or # woc-help
+                </li>
+
+            </ul>
+    </div>
+
+
+>>>>>>> f9524a0a552a8bb4f67f22394dba79c504d62323
+</main>
+
+
+</body>
+
+<script>
+console.log('test here')
+
+</script>
+</html>
+
+
